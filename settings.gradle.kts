@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "demo87"
+rootProject.name = "Sentenix_prototype2"
 include(":app")
  
