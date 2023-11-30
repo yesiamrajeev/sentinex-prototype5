@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "34127627969",
+    "firebase_url": "https://sentenix-c4e24-default-rtdb.firebaseio.com",
+    "project_id": "sentenix-c4e24",
+    "storage_bucket": "sentenix-c4e24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34127627969:android:8f65eb4767bbaf949cb640",
+        "android_client_info": {
+          "package_name": "com.example.sentenix_prototype1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBh37UTAEEr2HPn0VLqQDJ51fOIc29jCDM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34127627969:android:84c6a02ad2b23aa09cb640",
+        "android_client_info": {
+          "package_name": "com.example.sentenix_prototype2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBh37UTAEEr2HPn0VLqQDJ51fOIc29jCDM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
