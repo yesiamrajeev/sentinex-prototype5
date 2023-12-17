@@ -2,6 +2,8 @@
 
 Welcome to Sentinex, a community-driven safety and policing platform designed to create safer, more connected neighborhoods. Sentinex empowers individuals and communities to actively participate in their safety while contributing to sustainable development.
 
+
+
 ## Features
 
 ### Real-Time Incident Reporting
