@@ -40,6 +40,11 @@ Welcome to Sentinex, a community-driven safety and policing platform designed to
 - Be a part of building safer, sustainable communities.
 - Together, we redefine community safety.
 - Sentinex - For safer, connected neighborhoods.
+<div>
+  <img src="https://github.com/yesiamrajeev/sentinex-prototype5/assets/125568812/64200567-7893-4179-8582-bf2d01729f6e"width="250" height="500" >
+<img src="https://github.com/yesiamrajeev/sentinex-prototype5/assets/125568812/cffb01ac-0f5b-4602-afb2-aeddd6d63898"width="250" height="500">
+<img src="https://github.com/yesiamrajeev/sentinex-prototype5/assets/125568812/f00cc1ec-f057-48ac-9f75-5acf3ec40663"width="250" height="500">
+</div>
 
 ## Getting Started
 
