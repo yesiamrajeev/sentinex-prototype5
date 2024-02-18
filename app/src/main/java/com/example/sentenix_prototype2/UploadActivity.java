@@ -1,11 +1,11 @@
 package com.example.sentenix_prototype2;
 
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import android.content.Intent;
+
 import android.net.Uri;
 import android.os.Bundle;
+import android.content.Intent;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
@@ -13,10 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -24,6 +22,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 public class UploadActivity extends AppCompatActivity {
 
@@ -48,7 +51,9 @@ public class UploadActivity extends AppCompatActivity {
         locationEditText = findViewById(R.id.editTextText2);
         submitButton = findViewById(R.id.filereport3);
         documentButton = findViewById(R.id.filereport2);
-
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference reportsRef = database.getReference("reports");
 
@@ -77,14 +82,15 @@ public class UploadActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String description = descriptionEditText.getText().toString();
                 String location = locationEditText.getText().toString();
+                String time = getCurrentTime(); // Get current time
 
                 if (description.isEmpty() || location.isEmpty()) {
                     Toast.makeText(UploadActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                // Create a new report object
-                Report report = new Report(description, location);
+                // Create a new report object with description, location, and time
+                Report report = new Report(description, location, time);
 
                 // Push the report to Firebase Realtime Database
                 reportsRef.push().setValue(report);
@@ -142,6 +148,10 @@ public class UploadActivity extends AppCompatActivity {
 
     }
 
-
-
+    // Method to get current time in a desired format (e.g., "HH:mm:ss")
+    private String getCurrentTime() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss", Locale.getDefault());
+        Date currentTime = Calendar.getInstance().getTime();
+        return dateFormat.format(currentTime);
+    }
 }
